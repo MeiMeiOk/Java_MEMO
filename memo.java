@@ -6,7 +6,7 @@ public class memo {
 
 	public static void main(String[] args) {
 		int[] num = new int[16];
-		int neg = 0;
+		int fin = 0, y = 0, neg = 0, prom = 0;
 		Scanner captura = new Scanner(System.in);
 		
 		System.out.println("Dame 15 Numeros");
@@ -33,6 +33,22 @@ public class memo {
 			
 		}
 		System.out.println("Total de numeros negativos:"+ neg);
+		
+		for(int i=0; i<num.length; i++) {
+			if(num[i] != 0) {
+				prom += num[i];
+				y++;
+			}
+		}
+		
+		if(fin == 0) {
+			System.out.println("No hay numeros impares");
+		}
+		else {
+			fin = prom / y;
+			System.out.println(" ");
+			System.out.println("Promedio de numeros impares: " + fin);
+		}
 
 	}
 }
